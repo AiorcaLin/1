@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;zh-TW&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员） | Ocean and Star</title><meta name="author" content="SMY"><meta name="copyright" content="SMY"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="我不是渗透测试人员（你可能也不想成为一名渗透测试人员）I’m Not A Pentester (And You Might Not Want To Be One Either) 英语原文链接：https:&#x2F;&#x2F;assume-breach.medium.com&#x2F;im-not-a-pentester-and-you-might-not-want-to-be-one-either-8b5701808dfc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）">
+<meta property="og:url" content="https://aiorcalin.github.io/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/index.html">
+<meta property="og:site_name" content="Ocean and Star">
+<meta property="og:description" content="我不是渗透测试人员（你可能也不想成为一名渗透测试人员）I’m Not A Pentester (And You Might Not Want To Be One Either) 英语原文链接：https:&#x2F;&#x2F;assume-breach.medium.com&#x2F;im-not-a-pentester-and-you-might-not-want-to-be-one-either-8b5701808dfc">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/139844546?s=96&v=4">
+<meta property="article:published_time" content="2025-03-17T01:02:53.000Z">
+<meta property="article:modified_time" content="2025-03-17T00:20:00.708Z">
+<meta property="article:author" content="SMY">
+<meta property="article:tag" content="行业分析">
+<meta property="article:tag" content="翻译">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/139844546?s=96&v=4"><link rel="shortcut icon" href="/1/img/%E9%BB%91%E7%99%BD.png"><link rel="canonical" href="https://aiorcalin.github.io/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/1/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/1/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-16 20:20:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/139844546?s=96&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/1/archives/"><div class="headline">文章</div><div class="length-num">68</div></a><a href="/1/tags/"><div class="headline">标签</div><div class="length-num">40</div></a><a href="/1/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/1/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/1/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/1/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/1/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List:</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/1/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/1/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/1/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/1/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: pink"><nav id="nav"><span id="blog-info"><a href="/1/" title="Ocean and Star"><img class="site-icon" src="/1/img/%E9%97%A8%E9%9D%A2.jpg"/><span class="site-name">Ocean and Star</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/1/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/1/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/1/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/1/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List:</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/1/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/1/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/1/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/1/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-17T01:02:53.000Z" title="发表于 2025-03-16 21:02:53">2025-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T00:20:00.708Z" title="更新于 2025-03-16 20:20:00">2025-03-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/1/categories/Finish/">Finish</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="我不是渗透测试人员（你可能也不想成为一名渗透测试人员）"><a href="#我不是渗透测试人员（你可能也不想成为一名渗透测试人员）" class="headerlink" title="我不是渗透测试人员（你可能也不想成为一名渗透测试人员）"></a>我不是渗透测试人员（你可能也不想成为一名渗透测试人员）</h1><p>I’m Not A Pentester (And You Might Not Want To Be One Either)</p>
+<p>英语原文链接：<a target="_blank" rel="noopener" href="https://assume-breach.medium.com/im-not-a-pentester-and-you-might-not-want-to-be-one-either-8b5701808dfc">https://assume-breach.medium.com/im-not-a-pentester-and-you-might-not-want-to-be-one-either-8b5701808dfc</a></p>
+<p>(｡･∀･)ﾉﾞ嗨！今天这篇文章会和以往的有所不同。出于各种原因，我一直在我的博客和 Twitter 上保持低调。虽然要找出我是谁并不难——在我的LinkedIn上有我的Twitter和这个博客的链接（我知道，LinkedIn是个让人不太舒服的地方），但是我不会到处宣传我的Twitter和博客。</p>
+<p>我不确定之前是否在博客里说过这个（我眼中的网安行业），但我肯定在Twitter上提到过。再次声明，我不是一名渗透测试人员，虽然我对安全非常感兴趣，但是网络安全并不是我的本职工作。我曾经做过一段时间的渗透测试，但很快就离开了这个职位。为什么离开？稍后我会详细讲解。</p>
+<p>我从事安全相关工作的时间很短。我记得第一次使用<code>git clone</code>是在2018年。我直到2020年才拿到OSCP证书，期间失败了两次。我主要从事Linux管理员工作，这也是我IT职业生涯中大多数时候的工作。在从事IT工作之前，我曾在美国武装部队服役（期间并未从事IT工作）。所以，上面这一切对我来说是新奇的，过去是，现在也是。</p>
+<blockquote>
+<p><strong>OSCP</strong>（Offensive Security Certified Professional）是由<strong>Offensive Security</strong>提供的一个网络安全认证，主要测试渗透测试技能。通过该认证的人通常具备深入的网络安全和渗透测试能力，能够模拟黑客攻击并识别系统漏洞。</p>
+<p>对于许多人来说，OSCP是渗透测试领域的入门证书，也是网络安全职业生涯中的一个重要里程碑。</p>
+</blockquote>
+<p>我不是一个很好的程序员，甚至在Linux方面也不算特别厉害。我仍然需要查阅命令手册来完成我的工作。我常常遇到这个问题：“为什么<code>chmod web.txt 777</code>不起作用？”  哦，文件路径应该写在权限后面，正确的指令是 <code>chmod 777 web.txt</code>。</p>
+<p>我为什么要谈论这个？因为即使我不全职从事安全工作，我仍然可以进行恶意软件开发、攻击路径研究以及其他有趣的事情。只不过，我并没有因此得到报酬。关键是，我也不需要为此负责。</p>
+<p>五年前，当我刚开始接触这些时，我真的很想从事安全行业，是真真切切地想成为一名渗透测试人员。但是你仔细评估你想要的东西。再次声明，我不是一名渗透测试人员，但这是我希望有人在我尝试成为渗透测试人员之前，告诉我这些事情。</p>
+<h2 id="就业市场"><a href="#就业市场" class="headerlink" title="就业市场"></a>就业市场</h2><p>“天啊，外面有300万个网络安全岗位空缺！”    我们都听过这个说法。</p>
+<p>但看看这些统计数据的来源。很多时候，这些数据来自提供网络安全培训的机构！Weird huh?</p>
+<p>我们也听过关于网络安全初职位的讨论。</p>
+<blockquote>
+<p>“他们要求5年经验和OSCP证书才能申请初级职位！”</p>
+</blockquote>
+<p>事实是这样的：你确实可以找到一份渗透测试初级职位。前提是你必须有一定的经验，而这些经验并不是来自HackTheBox或TryHackMe的训练。Web开发者、系统管理员或.Net程序员都有很好的机会被引荐到公司内部的安全团队。这种情况通常是指候选人在已经就职的公司内部进行的横向调动。</p>
+<p>你没有OSCP证书或其他当前流行的证书吗？你想进入渗透测试领域？你可能需要一个计算机科学学位，而且你还得通过实习获得一份正式工作。</p>
+<p>拿到OSCP证书后，立刻获得EY面试的时代早已一去不复返。</p>
+<blockquote>
+<p>EY 指的是 <strong>安永（Ernst &amp; Young）</strong>，它是全球四大会计师事务所之一，提供审计、税务、咨询等服务。EY 也有专门的网络安全团队，负责为客户提供信息安全、风险管理、渗透测试等服务。</p>
+</blockquote>
+<p>与团队打好关系，转而从事安全工作。这样团队会了解你的优点和不足，如果得知你不会在 Nim 中编写新的 PoolParty POC ，他们也不会生气或者认为你虚报能力。</p>
+<blockquote>
+<p>“PoolParty” 是一组利用 Windows 线程池的过程注入技术，旨在通过滥用 Windows 线程池来执行恶意代码，从而绕过传统的安全防护措施。这些技术在 2023 年的 Black Hat EU 会议上进行了介绍。<a target="_blank" rel="noopener" href="https://github.com/SafeBreach-Labs/PoolParty?utm_source=chatgpt.com">https://github.com/SafeBreach-Labs/PoolParty?utm_source=chatgpt.com</a></p>
+</blockquote>
+<p>此外，大多数安全人员都有自负心理，并且觉得有必要在网上展现他们的技术优势以塑立形象。但是面对面的交流，尤其是与一位中级工程师面对面交谈会有更好的效果，因为他们可以代表你与招聘经理沟通。</p>
+<p>既然我们谈到了就业市场。现在是 2024 年。你看过裁员情况吗？每个科技公司都在裁员，怎么还会有公司急需网络安全领域的人才呢？</p>
+<p>对于那些拥有 10 年网络应用渗透测试经验、面向客户的咨询经验、CVE 以及在会议上发表过演讲的网络人才来说，网络安全领域的就业市场非常火热；但对于那些依靠关闭实时保护来运行MSF负载的人来说，市场就不那么火热了。</p>
+<p>Web应用领域的市场也很火热。为什么呢？因为如果你在Web应用方面足够厉害，你就能做漏洞赏金，赚取的金钱是咨询公司提供的薪资的4到5倍。</p>
+<blockquote>
+<p>作者在下一篇博客中否决了“是咨询公司愿意提供的薪资的4到5倍“的观点。详情见：<a target="_blank" rel="noopener" href="https://assume-breach.medium.com/im-not-a-pentester-and-you-might-not-want-to-be-one-either-part-2-the-response-ab838cca3519">https://assume-breach.medium.com/im-not-a-pentester-and-you-might-not-want-to-be-one-either-part-2-the-response-ab838cca3519</a></p>
+</blockquote>
+<p>坦白说，我曾被提供120k年薪做Web应用相关的工作。但我没有接受。因为我做系统管理员赚得更多。</p>
+<p>我不清楚全球就业市场的情况，以上只是我在美国看到，在其他国家可能会有所不同。我与很多欧盟的人交流，他们似乎有一些岗位空缺。但谁知道呢——英国渗透测试员的收入远低于美国的。</p>
+<p>顺便提一句，你有没有注意到现在有多少“培训”网站吗？这几乎就像是人们培训黑客技术赚的钱比从事实际的黑客工作还要多的多。我常常看到新的EDR规避、恶意软件开发、”REAL HACKER“等培训课程不断出现。 Strange huh?</p>
+<blockquote>
+<p>“EDR规避”是指绕过“端点检测与响应”（Endpoint Detection and Response, EDR）系统的技术。EDR系统通常用于检测和响应终端设备（如计算机、服务器等）上的恶意活动。</p>
+</blockquote>
+<h2 id="咨询"><a href="#咨询" class="headerlink" title="咨询"></a>咨询</h2><p>那么，你还想成为一名渗透测试人员吗？你以为你可以坐在Kali前，然后开始用psexec攻破域控（DA）吗？OK. 你参加过启动会议吗？你有没有被拉进过销售电话？你有没有被期望带来客户？</p>
+<p>欢迎来到网络安全咨询行业。你会发现，大多数渗透测试工作都在咨询行业中。这个肮脏、阴暗的咨询行业，使渗透测试人员常常陷入的深渊，没有可以预见的出路。</p>
+<p>在一些公司，安全性排在金钱之后——客户支付了多少？这决定了努力的程度。我记得曾听过“turn and burn”（转手即烧）这个说法。</p>
+<p>我也曾被告知：“他们支付的钱不多，随便做做就行。”  听起来很合理，对吧？</p>
+<p>很多时候，你可能会从与客户的合作中得知，他们花了2万块，最后得到的建议却只是关闭LLMNR。</p>
+<blockquote>
+<p><strong>LLMNR</strong>（Link-Local Multicast Name Resolution）是一种局域网协议，用于在没有DNS服务器的情况下，允许设备在同一网络内进行名称解析。简单来说，它允许网络设备通过广播的方式来解析主机名。</p>
+<p><strong>在安全上，LLMNR</strong> 存在一些漏洞：它可能会被攻击者利用来进行 <strong>“中间人攻击”</strong>，通过伪造响应来窃取凭据或者引导流量进行进一步的攻击。</p>
+</blockquote>
+<p>这就是现实，客户支付了15k做无线渗透测试，渗透测试人员运行Wifite，没捕获到握手包就离开了。听起来很棒，对吧？</p>
+<blockquote>
+<p><strong>Wifite</strong> 是一个用于无线网络渗透测试的自动化工具，特别用于攻击WPA和WPA2加密的Wi-Fi网络。</p>
+</blockquote>
+<p>所有的咨询公司都是这样吗？不，当然不是。确实有一些非常优秀的公司，真正花时间与客户合作，经过几个月甚至几年的努力来保障客户的网络安全。</p>
+<p>如果你正在面试一家咨询公司（乙方公司），请了解你将要面对的是什么。询问他们计费时间、每次项目有多少人员、报告要求等内容。还要问问他们关于研究、培训和发展时间的安排，他们是如何处理这些的。</p>
+<p>显然，如果你没有参与客户项目，你可不可能只看Netflix，那你到底在做什么呢？是在编辑别人写的报告？还是在开发内部的TTP（战术、技术和程序）？或者你只是一个接一个地接待客户，没有任何休息时间？</p>
+<blockquote>
+<p>TTP代表<strong>“战术、技术和程序”（Tactics, Techniques, and Procedures）</strong></p>
+<p><strong>战术（Tactics）</strong>：攻击者或防御者的整体目标或意图。</p>
+<p><strong>技术（Techniques）</strong>：达成这些目标的具体方法。</p>
+<p><strong>程序（Procedures）</strong>：执行这些技术的具体步骤或流程。</p>
+</blockquote>
+<p>当你在某个项目中遇到困难怎么办？你知道有漏洞可利用，但就是搞不定？这种情况我遇到过很多次，但公司不想再增加另一个渗透测试人员的成本，因此没人愿意去看我的攻击思路。最终，客户受到损失。</p>
+<p>内部团队通常更好（甲方公司）。通常没有那么多的报告，如果有报告，可以由整个团队处理。如果团队足够高效，甚至可以由专职的技术写手来处理！</p>
+<p>初级渗透测试人员需要明白他们在乙方公司眼中的形象。在商业世界中，如果你没有为公司带来收入，你就是在为公司增加成本。渗透测试人员不会带来钱，销售人员才会。</p>
+<p>渗透测试人员是公司的产品。公司通过“销售”渗透测试人员的时间来收取费用。若渗透测试人员工作超出了预定时间，客户不会额外付费，额外的时间成本会由公司承担。</p>
+<p>作为一个渗透测试人员，你会被那些有相同技能但价格更低的人换掉。在这个就业市场上，有很多高级工程师在Rapid7裁员后急于支付房贷。你认为他们不会为了避免房子被收回而接受90k的工作吗？Yeah, okay.</p>
+<blockquote>
+<p><strong>Rapid7</strong> 是一家知名的网络安全公司，提供各种安全解决方案，包括渗透测试、漏洞扫描、威胁检测等服务。它在网络安全行业中有一定的影响力，许多安全专家和公司使用其产品来帮助检测和修复安全漏洞。</p>
+</blockquote>
+<p>不幸的是，由于红队安全培训的兴起，现在的“黑客”比以往任何时候都要多。初级甚至中级渗透测试人员现在会发现找到一份工作变得极其困难，可能在未来都也会如此。我预测，这种情况只会变得越来越难，我们可能会看到拥有网络安全认证的人尝试进入其他IT领域，如云计算、系统管理或Web应用开发。</p>
+<h2 id="薪水"><a href="#薪水" class="headerlink" title="薪水"></a>薪水</h2><p>你认为你能赚 15 万美元吗？掂量一下。高级渗透测试员确实能赚到很不错的薪水。我当时做渗透测试员时，薪资是12万，比我当时做系统管理员时少了5千，但我接受了这份工作，因为我想从事安全工作。</p>
+<p>是的，你没看错。我减薪进入了安全行业。</p>
+<p>如果你拿到一份工作邀请，薪资大约在8.5万到12万之间。这是事实。听起来可能不错，但作为Azure管理员，你能赚得更多。当我从安全行业转回系统管理员时，我的薪水多了4万，并且我不需要处理报告、客户或计费时间。</p>
+<p>我曾通过私信将这件事请告诉了几个安全领域的人，其中有几个人表示他们正在认真考虑离开安全行业，因为他们每周工作超过40小时，却赚不到多少钱。</p>
+<p>当我担任渗透测试员时，我每周工作 60-65 个小时。我感觉这（工作时长）就像是团队中默认的，其他人也工作这么长的时间。这就是现实，你不会过上朝九晚五的生活，安全将成为你的全部。当你不在客户项目中时，你会被要求学习最新的热门课程来提升自己。</p>
+<p>你将需要获得最新的 OffSec 证书，开发新颖的 AMSI 绕过方法，等等。而这一切都得在下班后完成。你有没有注意到多少美国安全人员在午夜后发推文？你有没有注意到多少美国安全从业者周六下午仍在工作？</p>
+<h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><p>你会用 C、C#、python、perl、ruby、nim 和 rust 编程吗？你会用 bash、perl、Powershell 和 VBscript 编写脚本吗？是的，我也不会。对于很多渗透测试公司来说，你需要懂得编程。他们甚至会给你一个编程挑战（可能是 2 个）。</p>
+<p>编程对于渗透测试来说真的有必要吗？这需要看情况。你应该了解编程的基础知识，特别是C#和C中的WinAPI。您是否需要分析漏洞并在必要时重写它？是的，你需要。无论这个漏洞是用什么编程语言写的。</p>
+<p>渗透测试人员被期望在各个领域都是专家，从 .Net 编程到 Cisco 交换机配置，再到 Java 反序列化。你知道哪些 BitLocker 绕过方法？你设置过恶意接入点（rogue AP）吗？你知道如何为“钓鱼”设置 DMARC 和 SPF 吗？</p>
+<blockquote>
+<p><strong>BitLocker</strong> 通过加密硬盘和存储密钥的 TPM 模块来保护数据。</p>
+<p><strong>恶意接入点（Rogue AP）</strong>指的是未经授权的无线接入点，这种设备可能被黑客或攻击者部署在目标网络中，目的是诱使用户连接到它。</p>
+<p><strong>DMARC</strong>（Domain-based Message Authentication, Reporting, and Conformance）是一种电子邮件验证机制，用来帮助防止电子邮件欺诈和垃圾邮件。它通过结合 <strong>SPF</strong>（Sender Policy Framework）和 <strong>DKIM</strong>（DomainKeys Identified Mail）技术来验证发件人是否为其声明的域名的合法所有者，从而有效防止“伪造”发件人地址的邮件。</p>
+<p><strong>SPF</strong>（Sender Policy Framework）是一种用于验证电子邮件发送者身份的技术标准，目的是减少伪造和垃圾邮件。SPF的工作原理是在DNS记录中声明哪些邮件服务器被授权代表域名发送邮件。</p>
+</blockquote>
+<p>这里有个问题。你有没有搭建过基础设施来进行拨号攻击（war-dialing）？这是我曾经被要求做的一个任务。如果你不知道那是什么，查一下吧。这是上世纪80年代的事情，而我在2021年被要求做这个。</p>
+<blockquote>
+<p><strong>拨号攻击（War-dialing）</strong>是一种历史悠久的攻击方法，最初在上世纪80年代被黑客和安全研究人员用来扫描电话线路的开放端口。在这种攻击中，攻击者通过自动化工具拨打大量的电话号码，检查这些号码是否连接到调制解调器或其他容易被入侵的设备。</p>
+<p>虽然如今拨号攻击在传统意义上已经过时（因为调制解调器和电话线路不再是主流互联网接入方式），但它仍然可以在某些特定的场景中被用作对旧设备或某些设备进行扫描。对于一些企业或组织，尤其是那些还在使用旧的电话系统或调制解调器的，拨号攻击依然可能成为一种潜在的攻击手段。</p>
+</blockquote>
+<p>这些只是技术技能。当涉及到软技能时，你还需要做很多事情。比如，当你试图向 CISO 解释，自己的植入物被检测到并导致冲突是预期中的行为时，你得忍住脾气。</p>
+<p>在技能方面，你要么熟记于心，要么能够在大约 30 分钟内学会。Quick! 运行 secretsdump.py 的语法是什么？</p>
+<blockquote>
+<p><code>secretsdump.py</code> 是 Impacket 工具包中的一个脚本，用于从 Windows 系统中提取哈希值、密码、账户信息等。其基本用法通常是利用 SMB 或 NTLM 认证信息从远程系统上抓取凭证。</p>
+<p>Answer：secretsdump.py <target> -u <username> -p <password></p>
+</blockquote>
+<h2 id="工作任务"><a href="#工作任务" class="headerlink" title="工作任务"></a>工作任务</h2><p>当你进入安全领域时没人会告诉你这些事情。比如，你在 OffSec 实验室里学到的那些酷炫的技能，或者你自己做过的那些东西，可能根本无法在现实中应用。</p>
+<p>放弃基于 Powershell 的攻击吧。当我还是一名渗透测试员时，它们是被禁止的。为什么？因为“可能”会被检测到。我基于 PowerSploit 做的那些训练？（是无法应用的），我不得不寻找其他方法。</p>
+<p>还有一件事，你有个很牛的植入工具吗？你以为你能在目标上丢个 EXE 文件？想得美。作为渗透测试人员，我不被允许将任何东西写入磁盘。为什么？因为我“可能”会忘记它们，也因为它们“可能”会被检测到。</p>
+<p>那 BYVOD AV killer怎么样？Haha. Okay.你真觉得你的经理会让你在客户目标上禁用杀毒软件？那不可能。我曾经更改过一个注册表项来以打开 RDP 以横向移动到 SQL 服务器，结果所有人都炸了（Meltdown，他们极度担忧与恐慌）。</p>
+<blockquote>
+<p>BYOVD（Bring Your Own Vulnerable Driver）是一种攻击技术，攻击者利用受信任但存在漏洞的驱动程序来执行内核级恶意操作，从而绕过传统的安全防护措施。</p>
+<p>在2023年，名为Spyboy的攻击者推出了名为“Terminator”的工具，利用BYOVD技术，声称能够绕过几乎所有的防病毒（AV）、端点检测与响应（EDR）和扩展检测与响应（XDR）解决方案。</p>
+<p>详情见：<a target="_blank" rel="noopener" href="https://www.halcyon.ai/blog/blocking-byovd-techniques-to-prevent-av-edr-xdr-bypasses?utm_source=chatgpt.com">https://www.halcyon.ai/blog/blocking-byovd-techniques-to-prevent-av-edr-xdr-bypasses?utm_source=chatgpt.com</a></p>
+</blockquote>
+<p>显然，真实的APT攻击者使用的战术可能会对客户的环境造成破坏，因此根据渗透测试或红队演习中使用的战术、技术和程序（TTPs），模拟攻击行为和真实攻击行为之间的界限有时会模糊。如果这些操作造成了实际的损害或破坏，那么它们就转变为真正的攻击行为，通常这种情况在专业的测试中应该避免。</p>
+<p>在某些情况下，更改计划任务的参数以获得远程代码执行是可以接受的。在其他情况下，你真的可能会破坏某些东西。</p>
+<p>例如，一些公司会对分段的客户端网络模拟勒索软件攻击。但是，如果你正在对生产环境进行渗透测试，你确实需要小心你所更改的内容。</p>
+<p>我的意思是，你无法在客户网络上放开手脚地进行攻击。许多刚进入渗透测试行业的人并不了解这一点，认为他们用CRTO考试中所做的事情就足够应对现实情况了。你的公司会有很多限制，比你想象的要严格得多。</p>
+<blockquote>
+<p>CRTO (Certified Red Team Operator) 是由 <strong>Offensive Security</strong> 提供的认证，旨在验证渗透测试者在模拟红队攻击环境中的能力。这个认证考试主要测试红队操作员的技能，涵盖了渗透测试、社会工程学攻击、后渗透操作和防御绕过技术等方面。</p>
+</blockquote>
+<h2 id="EDR-的现状"><a href="#EDR-的现状" class="headerlink" title="EDR 的现状"></a>EDR 的现状</h2><p>EDR是人们没有考虑到的另一件事 。EDR、SIEM，无论你想叫它什么，它在客户网络中的普及度正在逐渐增加。</p>
+<blockquote>
+<p>EDR（Endpoint Detection and Response，端点检测与响应）是一种安全技术，旨在监控、检测和响应计算机端点（如个人电脑、服务器、移动设备等）上的恶意活动和潜在威胁。</p>
+<p>SIEM（Security Information and Event Management，安全信息与事件管理）是一种集成的安全管理工具，用于实时收集、分析、存储和报告来自不同安全系统的日志和事件数据，帮助组织检测和响应潜在的安全威胁。</p>
+</blockquote>
+<p>基于行为的检测将在未来10年内因AI的进步而占主导地位。突破这些防御只会变得越来越难。总会有办法吗？当然，但是无论行业是否愿意承认，许多公司会开始取消每年或每季度的渗透测试，因为渗透测试人员找不到突破口。</p>
+<p>想象一下，花40万美元雇佣一个公司进行红队渗透测试，结果却被告知测试人员无法从客户提供的起始系统进一步渗透到网络中的其他系统或区域。CISO是高管，他们需要看到实际的价值，而一份40万美元的Nessus扫描报告并没有太多价值。事实上，被告知渗透测试人员无法执行有效的渗透攻击，反而更能说明为什么应该放弃渗透测试了。</p>
+<p>这也与行业中的近期裁员有关。你觉得我错了？没关系。也许我确实错了，这只是我的一点看法。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>看，一切明朗了。我们都希望通过“黑客”工作赚钱。问题是黑客这一职业的实际情况与 OffSec Proving Grounds 或 HackTheBox 之类的认证大不相同。</p>
+<p>如果黑客是你的梦想，那就去追求吧！但是请提前准备好所需要的一切。我并不是要打击初级或中级渗透测试人员的热情，然而如果我早知道现实中的黑客工作是这样，我可能会选择继续做系统管理员，并争取获得RedHat认证工程师（RHCE）认证——这也是我过去五年一直在努力的方向。</p>
+<blockquote>
+<p><strong>RedHat认证工程师 (RHCE)</strong> 是由Red Hat提供的认证，Red Hat是开源软件解决方案的领先提供商，特别是用于Linux系统的解决方案。RHCE是IT专业人员中非常受尊敬且备受追捧的认证，特别是对于那些希望证明自己在管理和故障排除Red Hat企业Linux (RHEL)系统方面的专业技能的人。</p>
+</blockquote>
+<p>如果你对 Web 应用安全感兴趣，漏洞赏金领域的竞争正在变得激烈，但你仍然是自己的老板，许多人专注于 2-3 种攻击方式（如 XSS、注入等）。</p>
+<p>好了，就交给你吧！去努力尝试吧！</p>
+<h1 id="翻译感想："><a href="#翻译感想：" class="headerlink" title="翻译感想："></a>翻译感想：</h1><p>适合成长的环境。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://aiorcalin.github.io/1">SMY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://aiorcalin.github.io/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/">https://aiorcalin.github.io/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://aiorcalin.github.io/1" target="_blank">Ocean and Star</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/1/tags/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/">行业分析</a><a class="post-meta__tags" href="/1/tags/%E7%BF%BB%E8%AF%91/">翻译</a></div><div class="post_share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/139844546?s=96&amp;v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/1/2025/11/18/JAVA%E7%89%88%E6%9C%AC%E6%89%AB%E7%9B%B2/" title="Javaweb"><div class="cover" style="background: pink"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Javaweb</div></div></a></div><div class="next-post pull-right"><a href="/1/2025/03/07/%E5%85%8D%E6%9D%80Shellcode/" title="免杀shellcode"><div class="cover" style="background: pink"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">免杀shellcode</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/139844546?s=96&amp;v=4" onerror="this.onerror=null;this.src='/1/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">SMY</div><div class="author-info__description">MY CTF writeup <br>OSINT and learn</div></div><div class="card-info-data site-data is-center"><a href="/1/archives/"><div class="headline">文章</div><div class="length-num">68</div></a><a href="/1/tags/"><div class="headline">标签</div><div class="length-num">40</div></a><a href="/1/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/aiorcalin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:xieorca1@gmail.com" target="_blank" title="Email"><i class="fas-light fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98%EF%BC%88%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B9%9F%E4%B8%8D%E6%83%B3%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">我不是渗透测试人员（你可能也不想成为一名渗透测试人员）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%B1%E4%B8%9A%E5%B8%82%E5%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">就业市场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%A8%E8%AF%A2"><span class="toc-number">1.2.</span> <span class="toc-text">咨询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%96%AA%E6%B0%B4"><span class="toc-number">1.3.</span> <span class="toc-text">薪水</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E8%83%BD"><span class="toc-number">1.4.</span> <span class="toc-text">技能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.5.</span> <span class="toc-text">工作任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EDR-%E7%9A%84%E7%8E%B0%E7%8A%B6"><span class="toc-number">1.6.</span> <span class="toc-text">EDR 的现状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">1.7.</span> <span class="toc-text">结语</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BF%BB%E8%AF%91%E6%84%9F%E6%83%B3%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">翻译感想：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/1/2025/11/18/JAVA%E7%89%88%E6%9C%AC%E6%89%AB%E7%9B%B2/" title="Javaweb"><div style="background: pink"></div></a><div class="content"><a class="title" href="/1/2025/11/18/JAVA%E7%89%88%E6%9C%AC%E6%89%AB%E7%9B%B2/" title="Javaweb">Javaweb</a><time datetime="2025-11-18T01:32:34.000Z" title="发表于 2025-11-17 20:32:34">2025-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/" title="(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）"><div style="background: pink"></div></a><div class="content"><a class="title" href="/1/2025/03/17/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98/" title="(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）">(翻译)我不是渗透测试人员（你可能也不想成为一名渗透测试人员）</a><time datetime="2025-03-17T01:02:53.000Z" title="发表于 2025-03-16 21:02:53">2025-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1/2025/03/07/%E5%85%8D%E6%9D%80Shellcode/" title="免杀shellcode"><div style="background: pink"></div></a><div class="content"><a class="title" href="/1/2025/03/07/%E5%85%8D%E6%9D%80Shellcode/" title="免杀shellcode">免杀shellcode</a><time datetime="2025-03-07T02:02:53.000Z" title="发表于 2025-03-06 21:02:53">2025-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1/2025/02/07/2%E6%9C%88%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%91%A8%E6%8A%A5-hacker101/" title="Hacker101阶段总结"><div style="background: pink"></div></a><div class="content"><a class="title" href="/1/2025/02/07/2%E6%9C%88%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%91%A8%E6%8A%A5-hacker101/" title="Hacker101阶段总结">Hacker101阶段总结</a><time datetime="2025-02-07T02:02:53.000Z" title="发表于 2025-02-06 21:02:53">2025-02-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1/2024/12/20/Nmap%20Scripting%20Engine/" title="NSE"><div style="background: pink"></div></a><div class="content"><a class="title" href="/1/2024/12/20/Nmap%20Scripting%20Engine/" title="NSE">NSE</a><time datetime="2024-12-20T15:11:43.000Z" title="发表于 2024-12-20 10:11:43">2024-12-20</time></div></div></div></div></div></div></main><footer id="footer" style="background: black"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By SMY</div><div class="footer_custom_text">Hi, welcom to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/1/js/utils.js?v=4.13.0"></script><script src="/1/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,191,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="I" data-fontsize="15px" data-random="false" async="async"></script></div></body></html>
