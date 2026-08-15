@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="报价 · Solo + Agent 军队" data-en="Quote · Solo + Agent Army">报价 · Solo + Agent 军队</title>
+<meta name="description" data-zh="固定范围、固定价、按周交付。小全栈应用代建 / 自动化工作流 + 月维保 / AI 客服知识库。" data-en="Fixed scope, fixed price, weekly delivery. Full-stack app builds / automation workflows + monthly ops / AI support & knowledge-base agents.">
+<link rel="shortcut icon" href="/1/img/%E9%BB%91%E7%99%BD.png">
+<style>
+  :root{
+    --bg:#0b0f19; --bg2:#111827; --card:#151c2c; --line:#232b3d;
+    --fg:#e6eaf2; --muted:#9aa4b8; --accent:#5b8cff; --accent2:#22d3a6;
+    --warn:#f0b429; --radius:16px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#1b2540 0,var(--bg) 55%);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+  /* top bar */
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+    background:rgba(11,15,25,.72);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:700;letter-spacing:.3px}
+  .brand .dot{color:var(--accent2)}
+  .nav{display:flex;gap:18px;align-items:center}
+  .nav a{color:var(--muted);font-size:14px}
+  .nav a:hover{color:var(--fg)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:transparent;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font-size:13px}
+  .lang button.on{background:var(--accent);color:#fff}
+
+  /* hero */
+  .hero{padding:64px 0 32px;text-align:center}
+  .kicker{display:inline-block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);
+    border:1px solid var(--line);padding:5px 12px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.25;margin:.2em 0;font-weight:800}
+  .hero p.sub{color:var(--muted);max-width:760px;margin:16px auto 0;font-size:clamp(15px,2.2vw,18px)}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),#7aa2ff);color:#fff}
+  .btn.ghost{background:transparent;border-color:var(--line);color:var(--fg)}
+  .btn:hover{transform:translateY(-1px)}
+  .promise{margin-top:18px;font-size:14px;color:var(--muted)}
+  .promise b{color:var(--fg)}
+
+  /* section */
+  section{padding:44px 0}
+  h2.sec{font-size:clamp(22px,3.5vw,30px);font-weight:800;margin:0 0 6px}
+  .sec-sub{color:var(--muted);margin:0 0 28px}
+
+  /* sku cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;position:relative}
+  .card .tag{position:absolute;top:-10px;left:20px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+  .tag.anchor{background:var(--accent);color:#fff}
+  .tag.strategic{background:var(--accent2);color:#05261e}
+  .tag.premium{background:#a78bfa;color:#1a0f33}
+  .tag.maybe{background:transparent;border:1px dashed var(--warn);color:var(--warn)}
+  .tag.seed{background:#374151;color:#cbd5e1}
+  .tag.tbd{background:#2b3346;color:var(--muted)}
+  .card h3{margin:6px 0 4px;font-size:19px}
+  .card .no{color:var(--muted);font-size:13px;font-weight:600}
+  .card .deliver{color:var(--fg);font-size:14px;margin:8px 0 14px;min-height:44px}
+  .price{display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+  .price .row{display:flex;justify-content:space-between;font-size:14px}
+  .price .row span:first-child{color:var(--muted)}
+  .price .row b{font-weight:700}
+  .role{margin-top:10px;font-size:12px;color:var(--muted)}
+  .empty{color:var(--muted);font-style:italic;font-size:14px}
+
+  /* demos */
+  .demos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .demo{background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);padding:24px;text-align:center}
+  .demo .ph{height:150px;border-radius:12px;background:
+      repeating-linear-gradient(45deg,#1a2233 0 12px,#141b2a 12px 24px);
+    display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;margin-bottom:14px}
+  .demo h3{margin:0 0 6px;font-size:17px}
+  .demo p{color:var(--muted);font-size:14px;margin:0}
+  .soon{display:inline-block;margin-top:12px;font-size:12px;color:var(--warn);border:1px solid var(--warn);padding:3px 10px;border-radius:999px}
+
+  /* how / pay */
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .info h4{margin:0 0 10px;font-size:15px;color:var(--accent2)}
+  .info ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+  .info li{margin:6px 0}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--fg)}
+  .draft{background:var(--warn);color:#3a2a00;text-align:center;font-size:12px;padding:6px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="draft"><span data-zh="v0.1 草稿页 · 明码标价 · 每周按真实询单迭代" data-en="v0.1 draft · transparent pricing · iterated weekly on real inquiries">v0.1 draft</span></div>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">Ocean<span class="dot">·</span>Star <span data-zh="报价" data-en="Quote"></span></div>
+    <nav class="nav">
+      <a href="#sku" data-zh="服务" data-en="Services"></a>
+      <a href="#demos" data-zh="Demo" data-en="Demos"></a>
+      <a href="#contact" data-zh="联系" data-en="Contact"></a>
+      <div class="lang" role="group" aria-label="language">
+        <button id="zh" class="on" onclick="setLang('zh')">中</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <span class="kicker" data-zh="Solo + Agent 军队 · 公开造现金流" data-en="Solo + Agent Army · Building in Public"></span>
+    <h1>
+      <span data-zh="同行报价的工作量，我的边际成本低一个数量级。" data-en="A peer's quote of work — at a fraction of the marginal cost.">同行报价的工作量，我的边际成本低一个数量级。</span>
+    </h1>
+    <p class="sub">
+      <span data-zh="一个人 + 一支 agent 军队。固定范围、固定价、按周交付。用 SA 母机把代建成本打下来，把速度提上去。" data-en="One founder plus an army of agents. Fixed scope, fixed price, weekly delivery. The SA build-machine drives cost down and speed up."></span>
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="#contact"><span data-zh="聊聊你的需求" data-en="Tell me your need"></span></a>
+      <a class="btn ghost" href="#sku"><span data-zh="看服务与报价" data-en="See services & pricing"></span></a>
+    </div>
+    <p class="promise" data-zh="这个问题我能【固定价】做，首付 30%，本周开工。" data-en="I can do this at a fixed price — 30% deposit, work starts this week."></p>
+  </section>
+
+  <!-- SKU -->
+  <section id="sku" class="wrap">
+    <h2 class="sec" data-zh="服务与报价" data-en="Services & Pricing"></h2>
+    <p class="sec-sub" data-zh="国内走微信 / 支付宝，海外走 Stripe HK；数字品用 Gumroad。" data-en="China: WeChat / Alipay · Overseas: Stripe HK · Digital goods: Gumroad."></p>
+    <div class="grid">
+
+      <!-- ① -->
+      <div class="card">
+        <span class="tag anchor" data-zh="锚点" data-en="Anchor"></span>
+        <div class="no">①</div>
+        <h3 data-zh="小全栈应用代建" data-en="Full-stack app build"></h3>
+        <div class="deliver" data-zh="一句话 → 真 UI + CRUD + DB 可运行应用，含登录 / 支付 / 后台 / 部署。" data-en="One sentence → real UI + CRUD + DB running app, with auth / payments / admin / deploy."></div>
+        <div class="price">
+          <div class="row"><span data-zh="国内" data-en="China"></span><b>¥3,000–8,000</b></div>
+          <div class="row"><span data-zh="海外" data-en="Overseas"></span><b>$500–2,000</b></div>
+        </div>
+        <div class="role" data-zh="角色：锚点，SA 母机成本武器" data-en="Role: anchor, the SA cost weapon"></div>
+      </div>
+
+      <!-- ② -->
+      <div class="card">
+        <span class="tag strategic" data-zh="战略首选" data-en="Top pick"></span>
+        <div class="no">②</div>
+        <h3 data-zh="自动化工作流 + 月维保" data-en="Automation workflow + monthly ops"></h3>
+        <div class="deliver" data-zh="数据抓取清洗、报表自动化、API 对接、跨系统工作流。" data-en="Data scraping & cleaning, report automation, API integration, cross-system workflows."></div>
+        <div class="price">
+          <div class="row"><span data-zh="一次性" data-en="One-off"></span><b>¥2,000–6,000</b></div>
+          <div class="row"><span data-zh="月维保" data-en="Monthly ops"></span><b>¥1,500–3,800</b></div>
+        </div>
+        <div class="role" data-zh="角色：月维保＝复购" data-en="Role: monthly ops = recurring revenue"></div>
+      </div>
+
+      <!-- ③ -->
+      <div class="card">
+        <span class="tag premium" data-zh="单价最高" data-en="Highest ticket"></span>
+        <div class="no">③</div>
+        <h3 data-zh="中小企业 AI 客服 / 知识库 Agent" data-en="SMB AI support / knowledge-base agent"></h3>
+        <div class="deliver" data-zh="RAG 文档问答 + 线索捕获 + 预约 / 工单，单渠道 starter。" data-en="RAG doc Q&A + lead capture + booking / tickets, single-channel starter."></div>
+        <div class="price">
+          <div class="row"><span data-zh="国内" data-en="China"></span><b>¥5,000–12,000</b></div>
+          <div class="row"><span data-zh="海外" data-en="Overseas"></span><b>$5,000–8,000+</b></div>
+        </div>
+        <div class="role" data-zh="角色：单价最高，可转维保" data-en="Role: highest ticket, converts to ops"></div>
+      </div>
+
+      <!-- 犹豫项：智能合约审计 -->
+      <div class="card">
+        <span class="tag maybe" data-zh="还在犹豫要不要放" data-en="Maybe (undecided)"></span>
+        <div class="no">—</div>
+        <h3 data-zh="智能合约审计（按次）" data-en="Smart contract audit (per job)"></h3>
+        <div class="deliver" data-zh="Slither + LLM 双重审计报告。" data-en="Slither + LLM dual audit report."></div>
+        <div class="price">
+          <div class="row"><span data-zh="按合约包" data-en="Per contract pack"></span><b>¥2,000–5,000</b></div>
+        </div>
+        <div class="role" data-zh="角色：零新增成本，顺手挂" data-en="Role: zero extra cost, easy add-on"></div>
+      </div>
+
+      <!-- 4 儿童 App -->
+      <div class="card">
+        <span class="tag seed" data-zh="种子想法落地" data-en="Seed idea"></span>
+        <div class="no">4</div>
+        <h3 data-zh="儿童习惯 / 作业游戏化 App 代建" data-en="Kids habit / homework gamified app build"></h3>
+        <div class="deliver" data-zh="白标底座 + SA 定制（非学科，喂宠物式激励）。" data-en="White-label base + SA customization (non-academic, pet-feeding style rewards)."></div>
+        <div class="price">
+          <div class="row"><span data-zh="单价" data-en="Per project"></span><b>¥5,000–15,000</b></div>
+        </div>
+        <div class="role" data-zh="角色：种子想法的合法落地" data-en="Role: compliant home for a seed idea"></div>
+      </div>
+
+      <!-- 5 SillyTavern 代建（内容待定） -->
+      <div class="card">
+        <span class="tag tbd" data-zh="待补" data-en="TBD"></span>
+        <div class="no">5</div>
+        <h3 data-zh="SillyTavern 代建" data-en="SillyTavern setup / build"></h3>
+        <div class="deliver empty" data-zh="交付内容待定 —— 待补充。" data-en="Deliverables TBD — to be filled in."></div>
+        <div class="price">
+          <div class="row"><span data-zh="定价" data-en="Pricing"></span><b data-zh="待定" data-en="TBD"></b></div>
+        </div>
+        <div class="role empty" data-zh="角色：待定" data-en="Role: TBD"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section id="demos" class="wrap">
+    <h2 class="sec" data-zh="两个 Demo（页面上的证据）" data-en="Two Demos (proof on the page)"></h2>
+    <p class="sec-sub" data-zh="用 SA 母机生成，覆盖国内外两类客源。上线中，稍后补齐。" data-en="Generated with the SA build-machine, covering both China & overseas. Coming shortly."></p>
+    <div class="demos">
+      <div class="demo">
+        <div class="ph" data-zh="demo 预览位" data-en="demo preview">demo</div>
+        <h3 data-zh="① 一句话 → 带登录 / 支付的小 SaaS" data-en="① One sentence → a small SaaS with auth / payments"></h3>
+        <p data-zh="展示主打①：全栈代建能力。" data-en="Shows service ①: full-stack build capability."></p>
+        <span class="soon" data-zh="Demo 建设中" data-en="Demo in progress"></span>
+      </div>
+      <div class="demo">
+        <div class="ph" data-zh="demo 预览位" data-en="demo preview">demo</div>
+        <h3 data-zh="② 数据抓取 → 自动日报" data-en="② Data scraping → automated daily report"></h3>
+        <p data-zh="展示主打②：自动化工作流能力。" data-en="Shows service ②: automation workflow capability."></p>
+        <span class="soon" data-zh="Demo 建设中" data-en="Demo in progress"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW / PAY -->
+  <section class="wrap">
+    <div class="cols">
+      <div class="info">
+        <h4 data-zh="怎么合作" data-en="How we work"></h4>
+        <ul>
+          <li data-zh="固定范围 · 固定价 · 按周交付" data-en="Fixed scope · fixed price · weekly delivery"></li>
+          <li data-zh="必签书面合同，里程碑分期" data-en="Written contract, milestone-based payments"></li>
+          <li data-zh="首付 30%，本周即可开工" data-en="30% deposit, work can start this week"></li>
+          <li data-zh="收到款前不交付完整源码" data-en="Full source delivered after payment"></li>
+        </ul>
+      </div>
+      <div class="info">
+        <h4 data-zh="怎么收款" data-en="Payments"></h4>
+        <ul>
+          <li data-zh="国内：微信 / 支付宝" data-en="China: WeChat / Alipay"></li>
+          <li data-zh="海外：Stripe HK" data-en="Overseas: Stripe HK"></li>
+          <li data-zh="数字品：Gumroad" data-en="Digital goods: Gumroad"></li>
+        </ul>
+      </div>
+      <div class="info">
+        <h4 data-zh="为什么是我" data-en="Why me"></h4>
+        <ul>
+          <li data-zh="Solo + agent 军队，边际成本低一个数量级" data-en="Solo + agent army, an order of magnitude lower marginal cost"></li>
+          <li data-zh="半天一个可运行 demo" data-en="A runnable demo in half a day"></li>
+          <li data-zh="公开造现金流，进度可查" data-en="Building cash flow in public, progress visible"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="wrap" style="text-align:center">
+    <h2 class="sec" data-zh="说说你的问题" data-en="Tell me your problem"></h2>
+    <p class="sec-sub" data-zh="固定范围能固定价做的那种问题最合适。首付 30%，本周开工。" data-en="Best fit: a problem I can scope and price fixed. 30% deposit, start this week."></p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:xieorca1@gamil.com"><span data-zh="邮件联系" data-en="Email me"></span></a>
+      <a class="btn ghost" href="#"><span data-zh="微信 / X（待填）" data-en="WeChat / X (TODO)"></span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <span data-zh="Ocean and Star · 报价页 v0.1 · " data-en="Ocean and Star · Quote v0.1 · "></span>
+      <a href="/1/"><span data-zh="返回博客" data-en="Back to blog"></span></a>
+    </p>
+    <p style="opacity:.6" data-zh="明码标价 · 每周按真实询单迭代 · 本页非最终作品" data-en="Transparent pricing · iterated weekly on real inquiries · this page is a draft, not a portfolio piece"></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    l = (l==='en') ? 'en' : 'zh';
+    var attr = (l==='en') ? 'data-en' : 'data-zh';
+    document.documentElement.lang = (l==='en') ? 'en' : 'zh-CN';
+    document.getElementById('zh').classList.toggle('on', l==='zh');
+    document.getElementById('en').classList.toggle('on', l==='en');
+    document.querySelectorAll('[data-zh]').forEach(function(el){
+      var txt = el.getAttribute(attr);
+      if(txt===null) return;
+      if(el.tagName==='META'){ el.setAttribute('content', txt); }
+      else { el.textContent = txt; }
+    });
+    try{ localStorage.setItem('quote_lang', l); }catch(e){}
+  }
+  (function(){
+    var saved='zh';
+    try{ saved = localStorage.getItem('quote_lang') || ((navigator.language||'').startsWith('en')?'en':'zh'); }catch(e){}
+    setLang(saved);
+  })();
+</script>
+</body>
+</html>
